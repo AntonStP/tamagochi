@@ -1,0 +1,64 @@
+.instruction {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .lamp {
+    pointer-events: none;
+  }
+
+  &-box {
+    position: absolute;
+    @include option(padding, 10 12);
+    @include option(font-size, 20);
+    color: #ffffff;
+    text-align: center;
+    background: #b30000;
+    border-radius: 10% 22% 15% 30%;
+    z-index: 1;
+    box-sizing: border-box;
+    &_1 {
+      @include option(top, 90, 70);
+      @include option(left, 110, 0);
+      @include option(width, 110);
+    }
+    &_2 {
+      @include option(top, 100,80);
+      @include option(right, 95, 10);
+      @include option(max-width, 140);
+    }
+    &_3 {
+      @include option(top, 80);
+      left: 50%;
+      transform: translate(-60%,0%);
+      @include option(width, 130);
+    }
+    &_4 {
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include option(max-width, 150);
+    }
+    &_5 {
+      @include option(top, 260, 230);
+      @include option(left, 220, 50);
+      @include option(width, 120);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    @include option(width, 200);
+    @include option(height, 60);
+    @include option(font-size, 30);
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    z-index: 2;
+    transition: transform .2s ease-in-out;
+    &:active {
+      transform: translate(-50%,0%) scale(.9);
+    }
+  }
+}

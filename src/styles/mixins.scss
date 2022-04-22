@@ -1,0 +1,32 @@
+@mixin option($n, $v, $vm: $v, $vt: $vm){
+  @include DESKTOP{
+    #{$n}:vh($v);
+  }
+  @include TABLET-L{
+    #{$n}:vw($v);
+  }
+  @include MOBILE{
+    #{$n}:vw-m($vm);
+  }
+  @include TABLET{
+    #{$n}:vw-t($vt);
+  }
+}
+
+@mixin option-mob($n, $vm, $vt: $vm){
+  @include MOBILE{
+    #{$n}:vw-m($vm);
+  }
+  @include TABLET{
+    #{$n}:vw-t($vt);
+  }
+}
+
+@mixin option-desk($n, $v){
+  @include DESKTOP{
+    #{$n}:vh($v);
+  }
+  @include TABLET-L{
+    #{$n}:vw($v);
+  }
+}

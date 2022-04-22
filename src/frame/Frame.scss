@@ -1,0 +1,53 @@
+.frame {
+
+  $size-h: 65;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 1) inset, 0px -70px 15px 45px rgba(0, 0, 0, 1) inset;
+  -moz-box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 1) inset, 0px -70px 15px 15px rgba(0, 0, 0, 1) inset;
+  box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 1) inset, 0px -70px 15px 15px rgba(0, 0, 0, 1) inset;
+  &_dark {
+    background: #000000;
+  }
+
+  &__part {
+    position: absolute;
+    background: url("./../../public/images/bg-hand.svg");
+    background-size: auto 100%;
+    transition: height .3s ease-in-out;
+    &_top {
+      @include option(top, 75);
+      left: 0;
+      transform: rotateX(180deg);
+      min-width: 100%;
+    }
+    &_left,
+    &_right{
+      top: 0;
+      min-width: 100vh;
+      background-repeat: repeat-x;
+    }
+    &_left {
+      //@include option(left, $size-h);
+      transform:  translateX(-100%) rotateZ(90deg);
+      left: 0;
+      top: auto;
+      bottom: 0vh;
+      transform-origin: 100% 100%;
+    }
+    &_right {
+      right: 0;
+      @include option(top, -$size-h);
+      transform: rotate(-90deg);
+      transform-origin: 100% 100%;
+    }
+    &_bottom {
+      left: 0;
+      @include option(bottom, $size-h);
+      min-width: 100%;
+      background-repeat: repeat-x;
+    }
+  }
+}

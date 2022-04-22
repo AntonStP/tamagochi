@@ -1,0 +1,58 @@
+.character {
+
+  @mixin mod($mod) {
+    .character_#{$mod} & {
+      @content;
+    }
+  }
+
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  cursor: pointer;
+  animation: char-move 5s linear infinite;
+  @include MOBILE {
+    animation: char-move-m 5s linear infinite;
+  }
+  &_0 {
+    @include option(height, 220);
+  }
+  &_1 {
+    @include option(height, 130);
+  }
+  &_2 {
+    @include option(height, 250);
+  }
+  &_3 {
+    @include option(height, 280);
+  }
+  &_4 {
+    @include option(height, 220);
+  }
+  &_5 {
+    @include option(height, 250);
+  }
+  &_6 {
+    @include option(height, 290);
+  }
+  @include MOBILE {
+    bottom: 10%;
+  }
+
+  &__image {
+    height: 100%;
+    animation: vibroChar .2s ease-in infinite;
+    pointer-events: none;
+    img {
+      position: relative;
+      height: 100%;
+      @include mod("4") {
+        transform: rotateY(180deg);
+      }
+      @include mod("5") {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+

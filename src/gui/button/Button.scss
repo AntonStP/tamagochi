@@ -1,0 +1,26 @@
+.button {
+  @mixin mod($mod) {
+    @include modifier("button", $mod){
+      @content;
+    }
+  }
+
+  @include option(font-size, 16);
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  @include option(border-radius, 12);
+  background: #000000;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+
+
+
+
+}

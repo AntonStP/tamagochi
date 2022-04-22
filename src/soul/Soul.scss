@@ -1,0 +1,29 @@
+.soul {
+
+  $scale-soul: 0.2;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include option(width, 105*$scale-soul);
+  @include option(height, 192*$scale-soul);
+
+  opacity: 0;
+
+  &-enter,
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active,
+  &-enter-active {
+    animation: to-top-soul .6s linear both;
+  }
+
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    background: url("./../../public/images/souls.png") no-repeat center / contain;
+    animation: rotate-soul .5s ease-in-out infinite;
+  }
+}

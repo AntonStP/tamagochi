@@ -1,0 +1,39 @@
+.status-bar {
+  position: relative;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  background: #000000;
+  -webkit-box-shadow: 0px 0px 10px 14px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 10px 14px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 10px 14px rgba(0, 0, 0, 1);
+  z-index: 1;
+  &__cell {
+    z-index: 11111;
+    width: 25%;
+    @include option(padding, 20 5 15);
+    @include option(font-size, 20);
+    font-weight: 500;
+    text-align: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    &:nth-of-type(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      @include option(font-size, 27);
+      color: red;
+      font-weight: bold;
+      border-left: none;
+      border-right: none;
+    }
+    span {
+      display: block;
+      margin-top: .05em;
+      @include option(font-size, 22);
+      font-weight: bold;
+    }
+  }
+}

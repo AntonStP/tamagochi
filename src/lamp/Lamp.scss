@@ -1,0 +1,36 @@
+.lamp {
+  @mixin mod($mod) {
+    .lamp#{$mod} & {
+      @content;
+    }
+  }
+  $index: 0.15;
+
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  @include option(width, 278*$index);
+  @include option(height, 436*$index);
+  background: url("./../../public/images/lamp-off.png") no-repeat center / contain;
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: top .3s ease-in-out;
+  &_on {
+    top: 25%;
+    background: url("./../../public/images/lamp-on.png") no-repeat center / contain;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background: red;
+    width: 1px;
+    @include option(height, 100);
+    transition: height .2s ease-in-out;
+    @include mod("on") {
+      @include option(height, 200);
+    }
+  }
+}
