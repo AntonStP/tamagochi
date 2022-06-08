@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+  url('Montserrat-Regular.woff2') format('woff2'),
+  url('Montserrat-Regular.woff') format('woff'),
+  url('Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+  url('Montserrat-Medium.woff2') format('woff2'),
+  url('Montserrat-Medium.woff') format('woff'),
+  url('Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+  url('Montserrat-Bold.woff2') format('woff2'),
+  url('Montserrat-Bold.woff') format('woff'),
+  url('Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ScrawnCyrAOE';
+  src: local('ScrawnCyrAOE'), local('ScrawnCyrAOE'),
+  url('ScrawnCyrAOE.woff2') format('woff2'),
+  url('ScrawnCyrAOE.woff') format('woff'),
+  url('ScrawnCyrAOE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
