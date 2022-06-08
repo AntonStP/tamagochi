@@ -7,6 +7,7 @@ import {settings} from "./../constants/carousel-settings";
 import Button from "./../gui/button/Button";
 import LazyModal from "../lazyModal/LazyModal";
 import {randomInteger} from "./../utils/randomInteger"
+import {safeHTML} from "../utils/safeHTML";
 
 export default function Choose({setAndSaveName, setAndSaveCharId, setStage}) {
 
@@ -53,7 +54,7 @@ export default function Choose({setAndSaveName, setAndSaveCharId, setStage}) {
                   itemsData={chooseData.characters} item={ChooseItem}/>
       </div>
       <div className={"choose__set-name"}>
-        <div className={"choose__name-title"}>{chooseData.nameTitle}</div>
+        <div className={"choose__name-title"}>{safeHTML(chooseData.nameTitle)}</div>
         <input
           className={"choose__input"} type="text"
           onChange={() => change()} ref={inputRef}/>

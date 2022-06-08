@@ -1,6 +1,6 @@
-// import React from "react";
-// import ReactHtmlParser from 'react-html-parser';
-//
-// export function safeHTML(htmlString){
-//     return <>{ReactHtmlParser(htmlString)}</>
-// }
+import React from "react";
+import parse from "html-react-parser";
+
+export function safeHTML(htmlString){
+    return <>{parse(htmlString)}</>
+}
