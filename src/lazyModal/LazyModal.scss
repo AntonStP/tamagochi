@@ -18,7 +18,6 @@
     left: 50%;
     transform: translate(-50%,-50%);
     @include option(width, 310);
-    height: 60%;
     @include option(padding, 30 30 40);
     box-sizing: border-box;
     background: #000000;
@@ -33,7 +32,6 @@
   }
 
   &__text {
-    margin-bottom: auto;
     @include option(font-size, 24);
     text-align: center;
     color: #ffffff;
@@ -51,7 +49,7 @@
 
   &__button {
     display: flex;
-    margin: auto auto 0;
+    @include option(margin, 35 auto 0);
     @include option(font-size, 24);
     transition: transform .2s ease-in-out;
     &:active {
